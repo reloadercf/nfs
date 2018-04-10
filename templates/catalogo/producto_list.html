@@ -1,0 +1,33 @@
+{%extends 'catalog.html'%}
+{%block content%}
+<center><h2>Todos los Productos</h2></center>
+
+{%for obj in object_list%}
+
+
+
+
+<br>
+<h3>{{obj.titulo}}</h3>
+<tr>
+
+<th></th>
+<th></th>
+
+
+</tr>
+
+<tbody>
+<td>{{obj.descripcion}}</td>
+{%if obj.descargable %}
+<td> <a href="{{obj.descargable.url}}">Ver</a> </td>
+{%else%}
+<td>Para más información contactanos</td>
+{%endif%}
+</tbody>
+<br>
+
+
+
+{%endfor%}
+{%endblock content%}
